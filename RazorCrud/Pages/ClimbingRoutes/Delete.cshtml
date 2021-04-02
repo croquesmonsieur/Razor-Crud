@@ -1,0 +1,52 @@
+@page
+@model RazorCrud.Pages.ClimbingRoutes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ClimbingRoute</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.OriginatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.OriginatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Country)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Originator)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Originator)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Rating)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ClimbingRoute.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

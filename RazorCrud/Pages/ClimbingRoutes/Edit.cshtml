@@ -1,0 +1,55 @@
+@page
+@model RazorCrud.Pages.ClimbingRoutes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ClimbingRoute</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ClimbingRoute.ID" />
+            <div class="form-group">
+                <label asp-for="ClimbingRoute.Name" class="control-label"></label>
+                <input asp-for="ClimbingRoute.Name" class="form-control" />
+                <span asp-validation-for="ClimbingRoute.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingRoute.OriginatedDate" class="control-label"></label>
+                <input asp-for="ClimbingRoute.OriginatedDate" class="form-control" />
+                <span asp-validation-for="ClimbingRoute.OriginatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingRoute.Country" class="control-label"></label>
+                <input asp-for="ClimbingRoute.Country" class="form-control" />
+                <span asp-validation-for="ClimbingRoute.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingRoute.Originator" class="control-label"></label>
+                <input asp-for="ClimbingRoute.Originator" class="form-control" />
+                <span asp-validation-for="ClimbingRoute.Originator" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingRoute.Rating" class="control-label"></label>
+                <input asp-for="ClimbingRoute.Rating" class="form-control" />
+                <span asp-validation-for="ClimbingRoute.Rating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

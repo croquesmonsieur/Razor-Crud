@@ -1,0 +1,54 @@
+@page
+@model RazorCrud.Pages.ClimbingCompetitions.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ClimbingCompetition</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ClimbingCompetition.CompetitionName" class="control-label"></label>
+                <input asp-for="ClimbingCompetition.CompetitionName" class="form-control" />
+                <span asp-validation-for="ClimbingCompetition.CompetitionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingCompetition.Date" class="control-label"></label>
+                <input asp-for="ClimbingCompetition.Date" class="form-control" />
+                <span asp-validation-for="ClimbingCompetition.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingCompetition.Country" class="control-label"></label>
+                <input asp-for="ClimbingCompetition.Country" class="form-control" />
+                <span asp-validation-for="ClimbingCompetition.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingCompetition.CurrentChampionMen" class="control-label"></label>
+                <input asp-for="ClimbingCompetition.CurrentChampionMen" class="form-control" />
+                <span asp-validation-for="ClimbingCompetition.CurrentChampionMen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClimbingCompetition.CurrentChampionWomen" class="control-label"></label>
+                <input asp-for="ClimbingCompetition.CurrentChampionWomen" class="form-control" />
+                <span asp-validation-for="ClimbingCompetition.CurrentChampionWomen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

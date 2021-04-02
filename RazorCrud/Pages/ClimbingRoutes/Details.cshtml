@@ -1,0 +1,49 @@
+@page
+@model RazorCrud.Pages.ClimbingRoutes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ClimbingRoute</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.OriginatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.OriginatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Country)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Originator)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Originator)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClimbingRoute.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClimbingRoute.Rating)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ClimbingRoute.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

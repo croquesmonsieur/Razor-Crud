@@ -1,0 +1,56 @@
+@page
+@model RazorCrud.Pages.Climbers.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Climber</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Climber.ClimberName" class="control-label"></label>
+                <input asp-for="Climber.ClimberName" class="form-control" />
+                <span asp-validation-for="Climber.ClimberName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Climber.Date" class="control-label"></label>
+                <input asp-for="Climber.Date" class="form-control" />
+                <span asp-validation-for="Climber.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Climber.Country" class="control-label"></label>
+                <input asp-for="Climber.Country" class="form-control" />
+                <span asp-validation-for="Climber.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Climber.Style" class="control-label"></label>
+                <input asp-for="Climber.Style" class="form-control" />
+                <span asp-validation-for="Climber.Style" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Climber.FavoritePlace" class="control-label"></label>
+                <input asp-for="Climber.FavoritePlace" class="form-control" />
+                <span asp-validation-for="Climber.FavoritePlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Climber.Achievement" class="control-label"></label>
+                <input asp-for="Climber.Achievement" class="form-control" />
+                <span asp-validation-for="Climber.Achievement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
